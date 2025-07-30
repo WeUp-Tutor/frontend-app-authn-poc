@@ -5,6 +5,7 @@ import { breakpoints } from '@openedx/paragon';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import MediaQuery from 'react-responsive';
+import WupIndicator from '../wup/WupIndicator';
 
 import { DefaultLargeLayout, DefaultMediumLayout, DefaultSmallLayout } from './components/default-layout';
 import {
@@ -39,6 +40,7 @@ const BaseContainer = ({ children, showWelcomeBanner, fullName }) => {
 
   return (
     <>
+        <WupIndicator />
       <div className="col-md-12 extra-large-screen-top-stripe" />
       <div className="layout">
         <MediaQuery maxWidth={breakpoints.small.maxWidth - 1}>
